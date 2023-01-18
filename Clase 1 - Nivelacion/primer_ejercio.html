@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="searchForm" >
+        <label for="name" class="label">Nombre:</label>
+        <input type="text" id="name" name="user_name" class="input"></input>
+        <label for="apellido" class="label">Apellido:</label>
+        <input type="text" id="apellido" name="user_surname"class="input"></input>
+        <label for="universidad" class="label">Universidad:</label>
+        <input type="text" id="universidad" name="user_university" class="input"></input>
+        <button type="submit" id="submit" value="Confirmar" class="button">Envíe su mensaje</button>
+    </form>
+    
+    <script>
+     
+        let buttonSubmit = document.getElementById("searchForm");
+
+        buttonSubmit.addEventListener("submit",submitButtonVale)
+
+        function submitButtonVale(params) {
+            params.preventDefault()
+            let nombre = document.getElementById("name").value
+            let apellido = document.getElementById("apellido").value
+            let universidad = document.getElementById("universidad").value
+            window.alert("Mi nombre es " + nombre + " y mi apellido "+ apellido + " estudio en la universidad: " + universidad);
+        }
+
+    </script>
+</body>
+</html>
