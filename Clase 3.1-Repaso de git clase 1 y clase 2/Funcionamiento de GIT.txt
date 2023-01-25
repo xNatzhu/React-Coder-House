@@ -1,0 +1,87 @@
+CONEXION DE GIT CON EL NUEVO PROYECTO CREADO DE REACT 
+
+PASO 1
+
+git remote add origin link-del-repositorio | Cuando se crea el proyecto en react, no hay necesidad de hacer una inicializacion, ya que con el mismo comando de "npx create-react-app nombre-del-proyecto", ya se crea el proyecto por ese motivo no hay que volverlo a crear con el git init, sino que directamente se pasa al origen, que es la conexion con el repositorio.
+
+PASO 2
+
+git add . | El comando funciona que va estar agregando todo el contenido que tenga el proyecto creado. O se podria espeficiar git add "nombre-del-archivo". 
+Cuando se le aplica el git add el proyecto pasa a un estado de "stage" que significa que esta siendo preparado/almacenado para que se le de la orden de publicar.
+
+PASO 3
+
+git commit -m "Texto del comentario" | Cuando se suba el archivo se va estar identificando cual fue sobre escrito o agregado, y sobre encima de ese archivo aparecera un comentario, que podemos agregarle "feat | text" en el caso que sea un nuevo archivo subido o "bugfix" cuando se repara/soluciona un error en el codigo
+
+PASO 4
+
+git push origin nombre-de-la-rama | Para que los cambios aparezcan el repositario es decir, que ya se publiquen debemos hacer este commit los que nos permite que los archivo agregado + el comentario se estara publicando en el repositorio alojado.
+
+
+
+
+REALIZAR ACTUALIZACION AL REPOSITORIO 
+
+Cuando realizamos actualizaciones ya sea, para agregar una nueva carpeta a nuestro proyecto o sobreescribir una parte del codigo, se realiza de la siguiente manera.
+
+PASO 1
+
+git add .   | Primero agregamos el el git add que significa que vamos agregar un nuevo archivo para subir nuestro repositorio. El "." simboliza que se va subir todo el codigo nuevamente al repositorio, sin embargo GitHub va detectar cual es lo nuevo agregado, y solamente subira ese archivo. 
+Tambien se puede especializar y solamente subirse un archivo especifico "git add nombre-del-archivo" pero es recomendable usar el ".".
+
+PASO 2
+
+git commit -m "Texto del comentario" | Cuando se suba el archivo se va estar identificando cual fue sobre escrito o agregado, y sobre encima de ese archivo aparecera un comentario, que podemos agregarle "feat | text" en el caso que sea un nuevo archivo subido o "bugfix" cuando se repara/soluciona un error en el codigo
+
+PASO 3 | FINAL
+
+git push origin nombre-de-la-rama | Para que los cambios aparezcan el repositario es decir, que ya se publiquen debemos hacer este commit los que nos permite que los archivo agregado + el comentario se estara publicando en el repositorio alojado.
+
+
+
+
+
+
+
+CREACION DE RAMAS EN EL REPOSITORIO
+
+
+PASO 1
+
+git branch nombre-de-la-rama | Nos permite poder crear una rama nueva, para que la rama principal no reciba las actualizaciones sino mas bien la rama creada le lleguen las respectivas actualizaciones.
+
+PASO 2
+
+git checkout nombre-de-la-rama | Una vez que se crea la rama, lo que debemos realizar es poder movernos esa rama para aplicar todo los cambios o subir contenido en la rama nueva creada.
+
+PASO 3
+
+git add . | Se agregan los cambios o el contenido
+
+PASO 4
+
+git commit -m "Se agrega el comentario con respecto el contenido agregado"
+
+PASO 5
+
+git push origin nombre-de-la-rama | Publicara el contenido que hemos agregado en la etapa "stage" pasen al repositorio.
+De esta manera ya se publico el contenido agregado en el repositorio.
+
+
+
+
+PARA CLONAR REPOSITORIOS Y AGREGARLO EN TU CARPETA
+
+PASO 1
+
+Se copia la url del proyecto de github
+
+PASO 2
+
+git clone se-pega-la-url-del-repositorio | Nos permite descargar o copiar el repositorio, es decir nos va clonar el proyecto en nuestra computadora.
+
+PASO 3
+
+Si nosotros queremos utilizar o visualizar el proyecto, no va funcionar porque nos va faltar las dependencias que el git ignore no lo permitio que lo subiera. Para ese motivo debemos instalar los respectivas dependencias para que el mismo pueda funcionar.
+
+npm i | De esta manera se va instalar las dependencias. Va revisando en el package.json en la parte de dependencias y va observar cual estan instaladas. En el caso que existan, las ignora y caso contrario las instala al igual que en el package-lock.json el npm i va estar visualizando cual fue la version utilizada de esa dependencia se va sujetar a la version en la cual se desarrollo.
